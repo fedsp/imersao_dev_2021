@@ -1,0 +1,211 @@
+.container {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(220, 220, 220);
+    font-weight: lighter;
+    font-size:calc(30px + .5vw);
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(220, 220, 220);
+    font-weight: lighter;
+    font-size:calc(12px + .1vw);
+}
+
+span {
+    font-size:calc(17px + .1vw);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div.movieCategoryExpander > span {
+    color: white;
+    margin-left: .1vh;
+}
+
+body {
+    background-color: rgb(15, 15, 15);
+}
+
+.colapsibleMenu {
+    
+
+}
+.addMovie{
+    width: 100%;
+    min-width: 3vh;
+    background-color: rgb(30, 30, 30);
+    border-bottom: solid 2px rgb(45, 45, 45);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top:11vh;
+}
+
+.addMoviePlaceover{
+    height: 6vh;
+}
+
+.colapsibleMenuShrinked {
+    height: 6vh;
+}
+
+.colapsibleMenuExpanded {
+    height: 40vh;
+}
+
+.colapsibleMenuShrinking {
+    animation: shrinkMenu;
+    animation-duration: .6s;
+}
+
+.colapsibleMenuExpanding {
+    animation: expandMenu;
+    animation-duration: .6s;
+}
+
+.expansionButton {
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+    height: 6vh;
+    border-bottom: solid 4px rgb(45, 45, 45);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(200, 200, 200);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    cursor: pointer;
+}
+
+@keyframes expandMenu {
+    0% {
+        height: 6vh;
+    }
+    100% {
+        height: 40vh;
+    }
+}
+
+@keyframes shrinkMenu {
+    0% {
+        height: 40vh;
+    }
+    100% {
+        height: 6vh;
+    }
+}
+
+#expandIcon {
+    width: 2vh;
+    height: 2vh;
+    color: white;
+    transform: rotate(180deg);
+    filter: invert(75%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+#addMovieForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 0vh;
+}
+
+.formItem{
+    height: 5vh;
+    width: 30vh;
+    margin-top: 1vh;
+}
+
+#logo{
+    width: 3vh;
+    height: 3vh;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#addButton{
+    width: 5vh;
+    height: 5vh;
+    cursor:pointer;
+}
+
+.moviesContainer{
+    width: 100%;
+    height: 72vh;
+    
+}
+
+.singleMovieContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 2vh;
+    width: 20vh;
+}
+
+
+.movieImage{
+    width:20vh;
+    height:30vh;
+}
+
+.movieCategoryContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.movieCategoryContainerContent{
+    display: flex;
+    flex-direction: row;
+    overflow-y:hidden;
+    overflow-x: auto;
+}
+
+.movieCategoryExpander{
+    height: 3vh;
+    border-bottom: .3vh solid rgb(197,197,197);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.moviesContainer > .movieCategoryContainer:first-child{
+    margin-top: 1.2vh;
+}
+
+.movieTitle{
+    background-color: rgb(30,30,30);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:20vh ;
+    margin-top: 1vh;
+}
+
+div.movieTitle > span {
+    color: white;
+}
+
+.movieCategoryContainerContentShrinked{
+    height: 0vh;
+}
+
+.movieCategoryContainerContent.colapsibleMenuShrinked {
+    overflow: hidden;
+}

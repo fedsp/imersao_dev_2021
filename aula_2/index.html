@@ -1,0 +1,51 @@
+<html>
+
+<head>
+
+    <link href="./styles.css" rel="stylesheet">
+    <meta charset='utf-8' />
+</head>
+
+<body>
+    <script src='./script.js'>
+    </script>
+    <div class="containerAlpha">
+    </div>
+    <div class="containerImagem">
+    </div>
+    <div class="containerTexto">
+        <h1 class="texto">Conversor de moedas</h1>
+        <p class="texto">Insira um valor em reais e clique em 'converter'. O valor é mostrado em dólares americanos.
+        </p>
+
+        <label class="texto">Selecione a moeda de origem</label>
+        <select id="moedaOrigem">
+            <option value='real'>Real</option>
+            <option value='dolar'>Dolar</option>
+            <option value='euro'>Euro</option>
+            <option value='bitcoin'>Bitcoin</option>
+        </select>
+
+        <label class="texto">Selecione a moeda de destino</label>
+        <select id="moedaDestino">
+            <option value='real'>Real</option>
+            <option value='dolar'>Dolar</option>
+            <option value='euro'>Euro</option>
+            <option value='bitcoin'>Bitcoin</option>
+        </select>select>
+        <label class="texto">Insira o valor a ser convertido</label>
+        <input id="valorInformado" type="number"></input>
+
+        <button onclick="converterMoeda()">Converter</button>
+
+        <div class="resultado">
+            <label class="texto">Resultado: </label>
+            <span id="resultado">25</span>
+        </div>
+        <p class="texto">Obs: Valor considerado para cotação do dolar é 5 reais.</p>
+
+    </div>
+
+
+</body>
+<html>

@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <link href="./styles.css" rel="stylesheet">
+    <meta charset='utf-8' />
+    <script src='./script.js' async></script>
+</head>
+
+<body>
+    <div id="PopupRenderDiv"></div>
+    <div class="mainContainer" id="mainContainer">
+
+        <div class="midMenu">
+            <h1 class="addGameTitle">Adicionar jogo</h1>
+            <div id="gameDatePickerDiv"> <label for="gameDate">Data do jogo: </label>
+                <input class="inputItem" type="date" onchange="updateDate()" onkeypress="return false"
+                    id="gameDate"></input>
+            </div>
+            <span id="gameDisplayDate">Escolha a data</span>
+            <div id="addGameContainer">
+                <img class="teamLogo" id="teamLogoHome" src="./media/ball.png">
+                <div class="teamContainer">
+                    <select class="teamSelector inputItem" id="selectedHomeTeam" onchange="putTeamIcon('homeTeam')">
+                        <option value="" disabled selected hidden>Selecione um time</option>
+                    </select>
+                    <div class="incrementButton" id="homeTeamButton">
+                        <div class="minusButton customButton" onclick="decrement('homeTeam')"><span>-</span></div>
+                        <div class="score"><span id="homeTeamScore">0</span></div>
+                        <div class="plusButton customButton" onclick="increment('homeTeam')"><span>+</span></div>
+                    </div>
+                </div>
+                <span id="versusSign">&nbsp&nbsp&nbsp&nbspX&nbsp&nbsp&nbsp&nbsp</span>
+                <div class="teamContainer">
+                    <select class="teamSelector inputItem" id="selectedVisitorTeam"
+                        onchange="putTeamIcon('visitorTeam')">
+                        <option value="" disabled selected hidden>Selecione um time</option>
+                    </select>
+                    <div class="incrementButton" id="visitorTeamButton">
+                        <div class="minusButton customButton" onclick="decrement('visitorTeam')"><span>-</span></div>
+                        <div class="score"><span id="visitorTeamScore">0</span></div>
+                        <div class="plusButton customButton " onclick="increment('visitorTeam')"><span>+</span></div>
+                    </div>
+                </div>
+                <img class="teamLogo" id="teamLogoVisitor" src="./media/ball.png">
+            </div>
+            <button onclick="addItemToTable()" id="shakeButton">Adicionar Jogo</button>
+        </div>
+        
+        <div class="TableDiv">
+            <h1 class="addGameTitle">Tabela do campeonato</h1>
+            <table id="mainTable"></table>
+        </div>
+        <div class="bottomMenu">
+            <marquee behavior=scroll direction="left" scrollamount="20"><img src="./media/running.gif" class="logo">
+            </marquee>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+<html>

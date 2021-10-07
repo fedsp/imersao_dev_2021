@@ -1,0 +1,254 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    max-width: 14rem;
+    max-height: 14rem;
+    width: auto;
+    height: auto;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.smallTeamLogo{
+    max-width: 1rem;
+    max-height: 1rem;
+    width: auto;
+    height: auto;
+}
+
+#addGameContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50rem;
+    justify-content: space-between;
+}
+
+.addGameTitle{   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+}
+
+.customButton{
+    background-color: rgb(100,100,100);
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem;
+    color: white;
+}
+
+.incrementButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+}
+
+.score{
+    background-color: rgb(240,240,240);
+    width: 3rem;
+    height: 2rem;
+    padding: .2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.customButton > span{
+    font-weight: bold;
+    font-size: 1.5rem;    
+}
+
+.teamContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.teamLogo{
+    width: 6rem;
+    height: 6rem;
+    border:0;
+}
+
+.inputItem{
+    margin-bottom: 1rem;
+    height: 2rem;
+    width: 10rem;
+    text-align: center;
+}
+
+#versusSign{   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+button {
+    width: 10rem;
+    height: 3rem;
+    background-color: #04AA6D;
+    border-radius: .5rem;
+    border: 0;
+    color: white;
+}
+
+button:hover {
+    width: 10rem;
+    height: 3rem;
+    background-color: lightseagreen;
+}
+
+#gameDate{
+    color: white;
+    width: 52px;
+}
+
+#gameDisplayDate{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+}
+
+.bottomMenu{
+    padding-bottom: 1rem;
+    border-bottom: solid 2px lightskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #36e15e;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.midMenu{
+    padding-bottom: 1rem;
+    border-bottom: solid 2px lightskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+}
+
+@keyframes shake {
+    10%, 90% {
+        background-color:tomato;
+        color: white;
+        border: 0;
+      transform: translate3d(-2px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(3px, 0, 0);
+    }
+    
+    30%, 50%, 70% {
+      transform: translate3d(-3px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+  }
+}
+
+.uniquePopUp{    
+    width: 20rem;
+    height: 4rem;    
+    animation-name: popupAnimation;
+    animation-duration: 4s;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vh;
+    border-radius: 0.5vh;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#PopupRenderDiv{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: transparent;
+    width: 20rem;
+    height: 100%;
+}
+
+@keyframes popupAnimation {
+    0%   {
+        opacity: 0;
+        top: 0px;
+    }
+    25%  {
+        opacity: 1;
+        top: 20px;
+    }
+    50%  {
+        opacity: 1;
+        top: 20px;
+    }
+    75%  {
+        opacity: 1;
+        top: 20px;
+    }
+    100% {
+        opacity: 0;
+        top: -100px;
+    }
+}
+
+.buttonShake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+  }
+
+#mainTable{
+    font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+#mainTable td, #mainTable th {
+    border: 2px solid #ddd;
+    padding: 8px;
+  }
+
+#mainTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#mainTable tr:hover {background-color: #ddd;}
+
+#mainTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
